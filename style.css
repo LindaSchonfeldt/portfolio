@@ -1,0 +1,101 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  display: grid;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 4, 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+  height: 10vh;
+}
+
+.header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.header .nav-links a {
+  color: #fff;
+  font-size: smaller;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.header .nav-links a:hover {
+  color:aquamarine;
+}
+
+/* Hero section styles */
+.hero {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  border-color: #000000;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header .nav-links {
+        font-size: medium;    
+    }
+
+    .header .nav-links a{
+        font-size: small;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header .nav-links a{
+        font-size: medium;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .hero-text p {
+        font-size: 2rem;
+    }
+}
+
