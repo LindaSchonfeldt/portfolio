@@ -18,8 +18,10 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 4, 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  height: auto;
 }
 
 /* Header styles */
@@ -30,37 +32,40 @@ body {
   padding: 1rem;
   background-color: #0d453a;
   height: 10vh;
+  grid-column: span 4; /* This will span the header across all 4 columns */
 }
 
 .header .logo img {
-  width: 50px;
+  width: auto;
   height: auto;
+}
+
+.header .nav-links {
+  display: flex;
+  gap: 0.2rem;
 }
 
 .header .nav-links a {
   color: #fff;
   font-size: smaller;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   transition: background 0.3s;
 }
 
 .header .nav-links a:hover {
-  color: aquamarine;
+  color: black;
 }
 
 /* Hero section styles */
 .hero {
-  height: auto;
+  /*background: url("./assets/hero-bg.jpg") no-repeat center center/cover;*/
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   color: #000000;
-  border: 2px solid #000000;
-  border-color: #000000;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  grid-column: span 4; /* This will span the hero across all 4 columns */
 }
 
 .hero-text h1 {
@@ -75,20 +80,98 @@ body {
 }
 
 .hero-text p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
   margin-top: 0.5rem;
   width: 40vh;
   text-align: left;
 }
 
+/* CTA card styles */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+  justify-content: stretch; /* Ensure all cards stretch to the same height */
+  gap: 1rem;
+  padding: 0 0rem 1rem 0rem;
+  grid-column: span 4; /* This will span the cta-container across all 4 columns */
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  border-width: 3px 8px 8px 0px;
+  border-style: solid;
+  padding: 1rem;
+  flex: 1; /* Ensure all cards take up equal space */
+  min-width: 0; /* Prevent cards from overflowing */
+}
+
+/* Specific styles for cards with additional classes */
+.cta-card.one {
+  border-color: #0d453a;
+}
+
+.cta-card.two {
+  border-color: #f47068;
+}
+
+.cta-card.three {
+  border-color: #fe918b;
+}
+
+.cta-card h3 {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.cta-card p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  width: 100%; /* Ensure the paragraph takes up the full width of the card */
+  text-align: left;
+}
+
+.cta-button {
+  display: flex;
+  background-color: #0d453a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0.5rem 0;
+}
+
+/* Media queries */
 @media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+  }
+
+  .header {
+    grid-column: span 8;
+  }
+
   .header .nav-links {
+    gap: 0.5rem;
     font-size: medium;
   }
 
   .header .nav-links a {
+    padding: 1rem 1rem;
     font-size: small;
+  }
+
+  .hero {
+    grid-column: span 8;
   }
 
   .hero-text h1 {
@@ -100,32 +183,80 @@ body {
     margin-top: 0;
   }
 
-  .hero-text p {
-    font-size: 1rem;
+  .cta-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 2rem 2rem 2rem;
+    gap: 1rem;
+    grid-column: span 8;
+  }
+
+  .cta-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta-container p {
+    font-size: 0.9rem;
     margin-top: 0.5rem;
-    width: 50cap;
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header .nav-links a {
-    font-size: medium;
   }
 
-  .hero-text h1 {
-    font-size: 4rem;
+  .cta-card {
+    padding: 2rem;
   }
 
-  .hero-text h2 {
-    font-size: 2rem;
-    margin-top: 0;
-  }
+  @media screen and (min-width: 1024px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto 1fr auto;
+      gap: 2rem;
+    }
 
-  .hero-text p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    width: 70cap;
-    text-align: left;
+    .header {
+      grid-column: span 12;
+    }
+
+    .header .nav-links a {
+      padding: 1rem 1rem;
+      font-size: medium;
+    }
+
+    .hero {
+      grid-column: span 12;
+    }
+
+    .hero-text h1 {
+      font-size: 4rem;
+    }
+
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
+    .cta-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0 6rem 2rem 6rem;
+      gap: 2rem;
+      grid-column: span 12;
+    }
+
+    .cta-container h3 {
+      font-size: 1.5rem;
+    }
+
+    .cta-container p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .cta-card {
+      padding: 2rem;
+    }
   }
 }

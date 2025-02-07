@@ -4,3 +4,14 @@
 https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 
 
+<p>With a background in service, cognitive science, 
+                and interaction design, I am driven by creating technology 
+                that truly makes a difference in people's lives. 
+                </p> 
+                <p>I combine 
+                a keen eye for detail with creative thinking and empathy 
+                to develop solutions that are both user-friendly and 
+                meaningful. 
+                </p>
+
+
