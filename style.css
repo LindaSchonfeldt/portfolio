@@ -41,8 +41,7 @@ body {
 }
 
 .header .nav-links {
-  display: flex;
-  gap: 0.2rem;
+  display: none; /* Hide by default, show on larger screens */
 }
 
 .header .nav-links a {
@@ -57,9 +56,43 @@ body {
   color: black;
 }
 
+/* Hamburger menu styles */
+.menu-button {
+  display: block; /* Show by default, hide on bigger screens */
+  font-size: 2rem;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none; /* Hide the menu by default */
+  flex-direction: column;
+  background-color: #0d453a;
+  position: absolute;
+  top: 10vh; /* Adjust based on header height */
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #f47068;
+}
+
+.nav-menu.active {
+  display: block; /* Show the menu when active */
+}
+
 /* Hero section styles */
 .hero {
-  /*background: url("./assets/hero-bg.jpg") no-repeat center center/cover;*/
   display: flex;
   color: #000000;
   justify-content: center;
@@ -92,7 +125,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch; /* Ensure all cards stretch to the same height */
-  justify-content: stretch; /* Ensure all cards stretch to the same height */
   gap: 1rem;
   padding: 0 0rem 1rem 0rem;
   grid-column: span 4; /* This will span the cta-container across all 4 columns */
@@ -101,7 +133,7 @@ body {
 .cta-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   text-align: left;
   border-width: 3px 8px 8px 0px;
@@ -124,29 +156,41 @@ body {
   border-color: #fe918b;
 }
 
-.cta-card h3 {
+/* Text inside CTA cards */
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   text-align: left;
+}
+
+.cta-card h3 {
   font-size: 1rem;
 }
 
+/* Paragraphs inside CTA cards */
 .cta-card p {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   width: 100%; /* Ensure the paragraph takes up the full width of the card */
-  text-align: left;
 }
 
+/* Button styles */
 .cta-button {
+  margin-top: auto; /* Push the button to the bottom of the card */
+  min-width: 8vh;
+  padding: 0.5rem 1rem;
   display: flex;
   background-color: #0d453a;
   color: #fff;
-  padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   font-size: 0.8rem;
+  text-align: center;
   cursor: pointer;
   transition: background 0.3s;
-  margin: 0.5rem 0;
+  margin: 1rem 1rem 1rem 0;
 }
 
 /* Media queries */
@@ -158,16 +202,11 @@ body {
 
   .header {
     grid-column: span 8;
+    padding: 0 3rem 0 3rem;
   }
 
-  .header .nav-links {
-    gap: 0.5rem;
-    font-size: medium;
-  }
-
-  .header .nav-links a {
-    padding: 1rem 1rem;
-    font-size: small;
+  .menu-button {
+    display: block; /* Show the hamburger menu button */
   }
 
   .hero {
@@ -185,7 +224,7 @@ body {
 
   .cta-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Change to row on larger screens */
     justify-content: center;
     align-items: stretch;
     padding: 0 2rem 2rem 2rem;
@@ -203,7 +242,7 @@ body {
   }
 
   .cta-card {
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
   }
 
   @media screen and (min-width: 1024px) {
@@ -218,9 +257,17 @@ body {
       grid-column: span 12;
     }
 
+    .header .nav-links {
+      display: block;
+    }
+
     .header .nav-links a {
       padding: 1rem 1rem;
       font-size: medium;
+    }
+
+    .menu-button {
+      display: none;
     }
 
     .hero {
@@ -238,7 +285,7 @@ body {
 
     .cta-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: row; /* Change to row on larger screens */
       justify-content: center;
       align-items: center;
       padding: 0 6rem 2rem 6rem;
