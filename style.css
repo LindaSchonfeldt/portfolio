@@ -84,11 +84,11 @@ body {
 }
 
 .nav-menu a:hover {
-  background-color: #f47068;
+  background-color: #fe918b;
 }
 
 .nav-menu.active {
-  display: block; /* Show the menu when active */
+  display: flex; /* Show the menu when active */
 }
 
 /* Hero section styles */
