@@ -64,6 +64,15 @@ body {
   cursor: pointer;
 }
 
+.menu-icon {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.menu-button.active .menu-icon {
+  transform: rotate(45deg); /* Rotate the icon to create an X shape */
+}
+
 .nav-menu {
   display: none; /* Hide the menu by default */
   flex-direction: column;
@@ -189,7 +198,7 @@ body {
   font-size: 0.8rem;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
   margin: 1rem 1rem 1rem 0;
 }
 
