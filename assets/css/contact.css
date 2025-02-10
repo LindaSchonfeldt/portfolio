@@ -1,0 +1,36 @@
+/* Contact page specific styles */
+form[name="contact-form"] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form[name="contact-form"] label {
+  font-weight: bold;
+  margin-bottom: none;
+}
+
+form[name="contact-form"] input,
+form[name="contact-form"] textarea {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form[name="contact-form"] button {
+  padding: 0.5rem 1rem;
+  background-color: #0d453a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form[name="contact-form"] button:hover {
+  background-color: #f47068;
+}

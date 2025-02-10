@@ -1,0 +1,101 @@
+/* Hero section styles */
+.hero {
+  display: flex;
+  color: #000000;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  grid-column: span 4; /* This will span the hero across all 4 columns */
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.hero-text h2 {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.hero-text p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  width: 40vh;
+  text-align: left;
+}
+
+/* CTA card styles */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+  gap: 1rem;
+  padding: 0 0rem 1rem 0rem;
+  grid-column: span 4; /* This will span the cta-container across all 4 columns */
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  border-width: 3px 8px 8px 0px;
+  border-style: solid;
+  padding: 1rem;
+  flex: 1; /* Ensure all cards take up equal space */
+  min-width: 0; /* Prevent cards from overflowing */
+}
+
+/* Specific styles for cards with additional classes */
+.cta-card.one {
+  border-color: #0d453a;
+}
+
+.cta-card.two {
+  border-color: #f47068;
+}
+
+.cta-card.three {
+  border-color: #fe918b;
+}
+
+/* Text inside CTA cards */
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cta-card h3 {
+  font-size: 1rem;
+}
+
+/* Paragraphs inside CTA cards */
+.cta-card p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  width: 100%; /* Ensure the paragraph takes up the full width of the card */
+}
+
+/* Button styles */
+.cta-button {
+  margin-top: auto; /* Push the button to the bottom of the card */
+  min-width: 8vh;
+  padding: 0.5rem 1rem;
+  display: flex;
+  background-color: #0d453a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1rem 1rem 1rem 0;
+}
