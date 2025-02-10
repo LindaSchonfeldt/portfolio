@@ -6,19 +6,16 @@ form[name="contact-form"] {
   padding: 2rem;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
 }
 
 form[name="contact-form"] label {
   font-weight: bold;
-  margin-bottom: none;
 }
 
 form[name="contact-form"] input,
 form[name="contact-form"] textarea {
   padding: 0.5rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
 }
 
 form[name="contact-form"] button {
