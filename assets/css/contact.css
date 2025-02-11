@@ -1,4 +1,13 @@
 /* Contact page specific styles */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  grid-column: span 4;
+}
+
 form[name="contact-form"] {
   display: flex;
   flex-direction: column;

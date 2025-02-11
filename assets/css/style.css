@@ -1,5 +1,4 @@
 /* Import base styles and page-specific styles */
-@import url("base.css");
 @import url("home.css");
 @import url("about.css");
 @import url("portfolio.css");
