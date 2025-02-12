@@ -2,10 +2,10 @@
 .contact-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+  justify-content: left;
   grid-column: span 4;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 form[name="contact-form"] {
