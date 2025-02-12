@@ -1,10 +1,5 @@
 /* Hero section styles */
 .hero {
-  /*   display: flex;
-  color: #000000;
-  justify-content: center;
-  text-align: center;
-  /* padding: 2rem; */
   position: relative;
   grid-column: span 4; /* This will span the hero across all 4 columns */
   margin: 0; /* Remove any margin */
