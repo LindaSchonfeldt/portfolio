@@ -1,4 +1,4 @@
-/* Import base styles and page-specific styles */
+/* Import page-specific styles */
 @import url("home.css");
 @import url("about.css");
 @import url("portfolio.css");
@@ -9,8 +9,8 @@
 
 /* Reset some default browser styles */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
   box-sizing: border-box;
 }
 
@@ -18,8 +18,8 @@
 body {
   font-family: Jost, sans-serif;
   background-color: #f7f7f7;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  /*   margin: 0; 
+  padding: 0;  */
 }
 
 .grid-container {
@@ -27,7 +27,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
-  height: auto;
+  height: 100vh;
 }
 
 /* Header styles */
@@ -39,7 +39,6 @@ body {
   background-color: #0d453a;
   height: 10vh;
   grid-column: span 4; /* This will span the header across all 4 columns */
-  margin: 0; /* Remove any margin */
 }
 
 .header .logo img {
@@ -108,6 +107,46 @@ body {
   display: flex; /* Show the menu when active */
 }
 
+/* Footer styles */
+.footer {
+  background-color: #0d453a;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  grid-column: span 4;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-media a {
+  display: inline-block;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.1);
+}
+
 /* Media queries */
 @media screen and (min-width: 768px) {
   .grid-container {
@@ -124,6 +163,11 @@ body {
     display: block; /* Show the hamburger menu button */
   }
 
+  .footer {
+    grid-column: span 8;
+  }
+
+  /*Home page*/
   .hero {
     grid-column: span 8;
   }
@@ -160,65 +204,80 @@ body {
     padding: 2rem 2rem 1rem 2rem;
   }
 
-  @media screen and (min-width: 1024px) {
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: auto 1fr auto;
-      gap: 2rem;
-    }
+  /*Contact page*/
+  .contact-container {
+    grid-column: span 8;
+  }
+}
 
-    .header {
-      grid-column: span 12;
-    }
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+  }
 
-    .header .nav-links {
-      display: block;
-    }
+  .header {
+    grid-column: span 12;
+  }
 
-    .header .nav-links a {
-      padding: 1rem 1rem;
-      font-size: medium;
-    }
+  .header .nav-links {
+    display: block;
+  }
 
-    .menu-button {
-      display: none;
-    }
+  .header .nav-links a {
+    padding: 1rem 1rem;
+    font-size: medium;
+  }
 
-    .hero {
-      grid-column: span 12;
-    }
+  .menu-button {
+    display: none;
+  }
 
-    .hero-text h1 {
-      font-size: 4rem;
-    }
+  .footer {
+    grid-column: span 12; /* Ensure the footer spans all columns */
+  }
 
-    .hero-text h2 {
-      font-size: 2rem;
-      margin-top: 0;
-    }
+  /*Home page*/
+  .hero {
+    grid-column: span 12;
+  }
 
-    .cta-container {
-      display: flex;
-      flex-direction: row; /* Change to row on larger screens */
-      justify-content: center;
-      align-items: center;
-      padding: 0 6rem 2rem 6rem;
-      gap: 2rem;
-      grid-column: span 12;
-    }
+  .hero-text h1 {
+    font-size: 4rem;
+  }
 
-    .cta-container h3 {
-      font-size: 1.5rem;
-    }
+  .hero-text h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
 
-    .cta-container p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-    }
+  .cta-container {
+    display: flex;
+    flex-direction: row; /* Change to row on larger screens */
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem 2rem 6rem;
+    gap: 2rem;
+    grid-column: span 12;
+  }
 
-    .cta-card {
-      padding: 2rem;
-    }
+  .cta-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-container p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .cta-card {
+    padding: 2rem;
+  }
+
+  /* Contact page*/
+  .contact-container {
+    grid-column: span 12;
   }
 }

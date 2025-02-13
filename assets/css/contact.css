@@ -38,5 +38,13 @@ form[name="contact-form"] button {
 }
 
 form[name="contact-form"] button:hover {
-  background-color: #f47068;
+  background-color: #ffa3bc;
+}
+
+.contact-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  grid-column: span 2;
 }
