@@ -27,17 +27,29 @@ textarea {
   padding: 0.5rem;
   font-size: 15px;
   width: 100%;
-  border-radius: 4px; /* Add border radius for rounded corners */
+  border-radius: 4px;
 }
 
-textarea {
-  height: 150px; /* Set a specific height for the textarea */
-  resize: vertical; /* Allow vertical resizing only */
+input[name="name"]:active,
+input[name="email"]:active,
+textarea:active {
+  outline: none; /* Removes the standard */
+  border: solid 2px #fe918b;
 }
 
 input[name="accept-terms"] {
   width: fit-content;
   margin-right: 0.5rem;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #0d453a; /* Changes the color of the checkbox */
+}
+
+textarea {
+  height: 150px;
+  resize: vertical; /* Allow vertical resizing only */
+  font-family: Jost, sans-serif;
 }
 
 .name-container,
