@@ -205,8 +205,8 @@ body {
   }
 
   /*Contact page*/
-  .contact-container {
-    grid-column: span 8;
+  form[name="contact-form"] {
+    padding: 2rem;
   }
 }
 
@@ -276,8 +276,8 @@ body {
     padding: 2rem;
   }
 
-  /* Contact page*/
-  .contact-container {
-    grid-column: span 12;
+  /*Contact page*/
+  form[name="contact-form"] {
+    padding: 2rem;
   }
 }
