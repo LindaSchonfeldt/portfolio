@@ -93,20 +93,5 @@
 /* Button styles */
 .cta-button {
   margin-top: auto; /* Push the button to the bottom of the card */
-  min-width: 8vh;
-  padding: 0.5rem 1rem;
-  display: flex;
-  background-color: #0d453a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin: 1rem 1rem 1rem 0;
-}
-
-.cta-button:hover {
-  background-color: #ffa3bc;
+  margin-top: 1rem;
 }
