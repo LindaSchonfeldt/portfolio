@@ -7,10 +7,20 @@
 /* Import the Google Fonts stylesheet */
 @import url("https://fonts.googleapis.com/css?family=Jost&display=swap");
 
+/* Define CSS variables */
+:root {
+  /* Color Variables */
+  --primary-color: #0d453a;
+  --action-color: #ffa3bc;
+  --border-color: #000;
+  --text-color: #f7f7f7;
+
+}
+
 /* Reset some default browser styles */
 * {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -18,24 +28,24 @@
 body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  height: 100%; /* 100vh made the body not go all the way down around the footer*/
+  gap: 0;
+  /* 100vh made the body not go all the way down around the footer*/
+  height: 100%;
   font-family: Jost, sans-serif;
-  background-color: #f7f7f7;
   text-decoration: none;
+  background-color: #f7f7f7;
 }
 
 /*Button styles*/
 button {
   outline: 0;
   align-items: center;
-  background: #0d453a;
-  color: #fff;
-  border: 1px solid #000;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
-  flex-shrink: 0;
   font-size: 14px;
   gap: 8px;
   justify-content: center;
@@ -46,12 +56,14 @@ button {
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
   white-space: nowrap;
-  box-shadow: 2px 2px 0 #000; /* Standard shadow */
+  box-shadow: 4px 4px 0 #000;
 }
 
 button:hover {
-  box-shadow: 2px 2px 0 #000; /* Mindre skugga för intryckt effekt */
-  transform: translate(1px, 1px); /* Flytta knappen nedåt och åt höger */
+  /* Smaller shadow for pressed effect */
+  box-shadow: 2px 2px 0 #000;
+  /* Move the bottom downwards and to the right */
+  transform: translate(1px, 1px);
 }
 
 button:focus-visible {
@@ -65,9 +77,10 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #0d453a;
+  background-color: var(--primary-color);
   height: 12vh;
-  grid-column: span 4; /* This will span the header across all 4 columns */
+  grid-column: span 4;
+  /* This will span the header across all 4 columns */
 }
 
 .header .logo img {
@@ -76,11 +89,12 @@ button:focus-visible {
 }
 
 .header .nav-links {
-  display: none; /* Hide by default, show on larger screens */
+  /* Hide by default, show on larger screens */
+  display: none;
 }
 
 .header .nav-links a {
-  color: #fff;
+  color: var(--text-color);
   font-size: smaller;
   text-decoration: none;
   padding: 0.2rem 0.5rem;
@@ -88,27 +102,26 @@ button:focus-visible {
 }
 
 .header .nav-links a:hover {
-  color: black;
+  color: #000;
 }
 
 /* Hamburger menu styles */
 .hamburger-button {
-  display: block; /* Show by default, hide on bigger screens */
+  /* Show by default, hide on bigger screens */
+  display: block;
   font-size: 2rem;
-  color: #f7f7f7;
+  color: var(--text-color);
   cursor: pointer;
 }
 
-.hamburger-button.active .menu-icon {
-  transform: rotate(45deg); /* Rotate the icon to create an X shape */
-}
-
 .hamburger-menu {
-  display: none; /* Hide the menu by default */
+  /* Hide the menu by default */
+  display: none;
   flex-direction: column;
-  background-color: #0d453a;
+  background-color: var(--primary-color);
   position: absolute;
-  top: 10vh; /* Adjust based on header height */
+  /* Adjust based on header height */
+  top: 10vh;
   right: 0;
   width: 100%;
   text-align: center;
@@ -116,7 +129,7 @@ button:focus-visible {
 }
 
 .hamburger-menu a {
-  color: #fff;
+  color: var(--text-color);
   padding: 1rem;
   text-decoration: none;
   display: block;
@@ -124,19 +137,22 @@ button:focus-visible {
 }
 
 .hamburger-menu a:hover {
-  background-color: #ffa3bc;
+  background-color: var(--action-color);
 }
 
 .hamburger-menu.active {
-  display: flex; /* Show the menu when active */
+  /* Show the menu when active */
+  display: flex;
 }
 
 /* Footer styles */
 .footer {
-  background-color: #0d453a;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 1rem 0;
   text-align: center;
+  /*Have the footer extend to the bottom*/
+  flex-grow: 1;
   grid-column: span 4;
 }
 
@@ -175,7 +191,6 @@ button:focus-visible {
 @media screen and (min-width: 768px) {
   body {
     grid-template-columns: repeat(8, 1fr);
-    gap: 2rem;
   }
 
   .header {
@@ -184,7 +199,8 @@ button:focus-visible {
   }
 
   .hamburger-button {
-    display: block; /* Show the hamburger menu button */
+    /* Show the hamburger menu button */
+    display: block;
   }
 
   .footer {
@@ -211,11 +227,13 @@ button:focus-visible {
 
   .cta-container {
     display: flex;
-    flex-direction: row; /* Change to row on larger screens */
+    /* Change to row on larger screens */
+    flex-direction: row;
     justify-content: center;
     align-items: stretch;
     padding: 0 2rem 2rem 2rem;
     gap: 1rem;
+    margin: 1rem;
     grid-column: span 8;
   }
 
@@ -243,7 +261,6 @@ button:focus-visible {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr auto;
-    gap: 2rem;
   }
 
   .header {
@@ -268,7 +285,7 @@ button:focus-visible {
   }
 
   .footer {
-    grid-column: span 12; /* Ensure the footer spans all columns */
+    grid-column: span 12;
   }
 
   /*Home page*/
@@ -284,11 +301,11 @@ button:focus-visible {
 
   .cta-container {
     display: flex;
-    flex-direction: row; /* Change to row on larger screens */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0 6rem 2rem 6rem;
-    gap: 2rem;
+    margin: 1rem;
     grid-column: span 12;
   }
 
@@ -308,6 +325,5 @@ button:focus-visible {
   /*Contact page*/
   form[name="contact-form"] {
     padding: 2rem;
-    grid-column: span 4;
   }
 }

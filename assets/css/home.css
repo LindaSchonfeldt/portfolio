@@ -1,8 +1,8 @@
 /* Hero section styles */
 .hero {
   position: relative;
-  grid-column: span 4; /* This will span the hero across all 4 columns */
-  margin: 0; /* Remove any margin */
+  grid-column: span 4;
+  margin: 0;
 }
 
 .hero img {
@@ -16,31 +16,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
-  width: 90%; /* Ensure the text takes up to 90% of the image width */
-  max-width: 100%; /* Ensure the text does not exceed the image width */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  color: var(--text-color);
+  /* Ensure the text takes up to 90% of the image width */
+  width: 90%;
+  /* Ensure the text does not exceed the image width */
+  max-width: 100%;
+  /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
 }
 
 .hero-text h1 {
   font-size: 1.5rem;
-  margin-bottom: 0;
-  margin: 0; /* Remove any margin */
+  margin: 0;
 }
 
 .hero-text h2 {
   font-size: 1rem;
-  margin: 0; /* Remove any margin */
+  margin: 0;
 }
 
 /* CTA card styles */
 .cta-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Ensures all cards stretch to the same height */
+  padding: 0rem 0rem 1rem 0rem;
+  margin: 1rem;
   gap: 1rem;
-  padding: 0 0rem 1rem 0rem;
-  grid-column: span 4; /* Spans the cta-container across all 4 columns */
+  /* Ensures all cards take up equal space */
+  flex: 1;
+  grid-column: span 4;
 }
 
 .cta-card {
@@ -52,8 +56,9 @@
   border-width: 3px 8px 8px 0px;
   border-style: solid;
   padding: 1rem;
-  flex: 1; /* Ensures all cards take up equal space */
-  min-width: 0; /* Prevents cards from overflowing */
+  /* Prevents cards from overflowing */
+  min-width: 0;
+  box-shadow: 10px 10px gray;
 }
 
 /* Specific styles for cards with additional classes */
@@ -86,11 +91,15 @@
 .cta-card p {
   font-size: 0.8rem;
   margin-top: 0.5rem;
-  width: 100%; /* Ensure the paragraph takes up the full width of the card */
+  /* Ensure the paragraph takes up the full width of the card */
+  width: 100%;
+
 }
 
 /* Button styles */
 .cta-button {
-  margin-top: auto; /* Push the button to the bottom of the card */
+  /* Push the button to the bottom of the card */
+  margin-top: auto;
   margin-top: 1rem;
+  /*I'm aware I'm using two margin-tops's but without both it doesn't look as good*/
 }
