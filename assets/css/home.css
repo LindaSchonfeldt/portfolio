@@ -24,7 +24,6 @@
 
 .hero-text h1 {
   font-size: 1.5rem;
-  /* margin-top: 1rem; */
   margin-bottom: 0;
   margin: 0; /* Remove any margin */
 }
@@ -38,10 +37,10 @@
 .cta-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Ensure all cards stretch to the same height */
+  align-items: stretch; /* Ensures all cards stretch to the same height */
   gap: 1rem;
   padding: 0 0rem 1rem 0rem;
-  grid-column: span 4; /* This will span the cta-container across all 4 columns */
+  grid-column: span 4; /* Spans the cta-container across all 4 columns */
 }
 
 .cta-card {
@@ -53,8 +52,8 @@
   border-width: 3px 8px 8px 0px;
   border-style: solid;
   padding: 1rem;
-  flex: 1; /* Ensure all cards take up equal space */
-  min-width: 0; /* Prevent cards from overflowing */
+  flex: 1; /* Ensures all cards take up equal space */
+  min-width: 0; /* Prevents cards from overflowing */
 }
 
 /* Specific styles for cards with additional classes */

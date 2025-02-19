@@ -18,9 +18,8 @@
 body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto 1fr auto;
   gap: 1rem;
-  height: 100vh;
+  height: 100%; /* 100vh made the body not go all the way down around the footer*/
   font-family: Jost, sans-serif;
   background-color: #f7f7f7;
   text-decoration: none;
@@ -67,7 +66,7 @@ button:focus-visible {
   align-items: center;
   padding: 1rem;
   background-color: #0d453a;
-  height: 10vh;
+  height: 12vh;
   grid-column: span 4; /* This will span the header across all 4 columns */
 }
 
@@ -93,18 +92,18 @@ button:focus-visible {
 }
 
 /* Hamburger menu styles */
-.menu-button {
+.hamburger-button {
   display: block; /* Show by default, hide on bigger screens */
   font-size: 2rem;
   color: #f7f7f7;
   cursor: pointer;
 }
 
-.menu-button.active .menu-icon {
+.hamburger-button.active .menu-icon {
   transform: rotate(45deg); /* Rotate the icon to create an X shape */
 }
 
-.nav-menu {
+.hamburger-menu {
   display: none; /* Hide the menu by default */
   flex-direction: column;
   background-color: #0d453a;
@@ -116,7 +115,7 @@ button:focus-visible {
   z-index: 2;
 }
 
-.nav-menu a {
+.hamburger-menu a {
   color: #fff;
   padding: 1rem;
   text-decoration: none;
@@ -124,11 +123,11 @@ button:focus-visible {
   transition: background 0.3s;
 }
 
-.nav-menu a:hover {
+.hamburger-menu a:hover {
   background-color: #ffa3bc;
 }
 
-.nav-menu.active {
+.hamburger-menu.active {
   display: flex; /* Show the menu when active */
 }
 
@@ -184,7 +183,7 @@ button:focus-visible {
     padding: 0 3rem 0 3rem;
   }
 
-  .menu-button {
+  .hamburger-button {
     display: block; /* Show the hamburger menu button */
   }
 
@@ -193,7 +192,7 @@ button:focus-visible {
   }
 
   /*Home page*/
-  main {
+  body {
     grid-column: span 8;
   }
 
@@ -260,7 +259,7 @@ button:focus-visible {
     font-size: medium;
   }
 
-  .menu-button {
+  .hamburger-button {
     display: none;
   }
 
@@ -273,9 +272,6 @@ button:focus-visible {
   }
 
   /*Home page*/
-  main {
-    grid-column: span 12;
-  }
 
   .hero-text h1 {
     font-size: 4rem;
@@ -312,5 +308,6 @@ button:focus-visible {
   /*Contact page*/
   form[name="contact-form"] {
     padding: 2rem;
+    grid-column: span 4;
   }
 }
