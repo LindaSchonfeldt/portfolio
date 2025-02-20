@@ -42,10 +42,23 @@
   </nav>
 
   <div class="hero">
-    <img
+    <!-- <img
       src="./assets/hero-bg2.png"
       alt="hero-image"
-    />
+    /> -->
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="hero-video"
+    >
+      <source
+        src="./assets/hero-video.mp4"
+        type="video/mp4"
+      >
+      Your browser doesn't support the video tag.
+    </video>
     <div class="hero-text">
       <h1>Hi, I'm Linda Schönfeldt</h1>
       <h2>- UX Designer & Frontend Developer -</h2>
@@ -54,23 +67,23 @@
 
   <div class="cta-container">
     <div class="cta-card one">
-      <cta-text>
+      <div class="cta-text">
         <h3>Design</h3>
         <p>
           Designing user interfaces and experiences is my passion. I love to
           create beautiful and functional designs that are easy to use.
         </p>
-      </cta-text>
+      </div>
       <button class="cta-button">View Portfolio</button>
     </div>
     <div class="cta-card two">
-      <cta-text>
+      <div class="cta-text">
         <h3>Development</h3>
         <p>
           I love developing websites and applications together with a team.
           I have experience with HTML, CSS, JavaScript, React and more.
         </p>
-      </cta-text>
+      </div>
       <a
         href="https://github.com/LindaSchonfeldt"
         target="_blank"
@@ -80,14 +93,14 @@
       </a>
     </div>
     <div class="cta-card three">
-      <cta-text>
+      <div class="cta-text">
         <h3>Strategy</h3>
         <p>
           Helping companies improve their digital products is what I do
           best. I have experience with product strategy, user testing,
           prototyping and more.
         </p>
-      </cta-text>
+      </div>
       <button class="cta-button">View CV</button>
     </div>
   </div>
