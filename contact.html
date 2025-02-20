@@ -12,6 +12,10 @@
     href="./style.css"
   />
   <title>Linda Schönfeldt | Contact</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Jost&display=swap"
+    rel="stylesheet"
+  >
 </head>
 
 <body>
@@ -46,48 +50,48 @@
     method="POST"
     action="https://httpbin.org/anything"
   >
-  <h2>Get in contact</h2>
-  <fieldset>
-    <div class="name-container">
-      <label for="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-      />
-    </div>
-    <div class="email-container">
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-      />
-    </div>
-    <div class="message-container">
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        required
-      > </textarea>
-    </div>
-    <div class="checkbox-container">
-      <input
-        type="checkbox"
-        id="accept-terms"
-        name="accept-terms"
-        required
-      />
-      <label for="accept-terms">I accept the terms and conditions</label>
-    </div>
-  </fieldset>
-  <button
-    id="submit-button"
-    type="submit"
-  >Submit</button>
+    <h2>Get in contact</h2>
+    <fieldset>
+      <div class="name-container">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="email-container">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="message-container">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+        > </textarea>
+      </div>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          id="accept-terms"
+          name="accept-terms"
+          required
+        />
+        <label for="accept-terms">I accept the terms and conditions</label>
+      </div>
+    </fieldset>
+    <button
+      id="submit-button"
+      type="submit"
+    >Submit</button>
   </form>
 
   <footer class="footer">
@@ -139,4 +143,5 @@
   </footer>
   <script src="./scripts.js"></script>
 </body>
+
 </html>
