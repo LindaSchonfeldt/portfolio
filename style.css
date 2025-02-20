@@ -108,16 +108,14 @@ button:focus-visible {
 }
 
 .hamburger-menu {
-  /* Hide the menu by default */
   display: none;
   flex-direction: column;
   background-color: var(--primary-color);
   position: absolute;
   /* Adjust based on header height */
-  top: 10vh;
+  top: 100%;
   right: 0;
   width: 100%;
-  /* transition: ; */
   text-align: center;
   z-index: 2;
 }
@@ -137,9 +135,10 @@ button:focus-visible {
 .hamburger-menu.active {
   /* Show the menu when active */
   display: flex;
+  top: 12vh;
 }
 
-/* HOME PAGE specific styles */
+/* HOME PAGE  */
 /*Hero section styles */
 .hero {
   position: relative;
@@ -190,6 +189,7 @@ button:focus-visible {
 }
 
 .cta-card {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -201,6 +201,14 @@ button:focus-visible {
   /* Prevents cards from overflowing */
   min-width: 0;
   box-shadow: 10px 10px gray;
+  /*Cta-card show*/
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.cta-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Specific styles for cards with additional classes */

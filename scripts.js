@@ -1,6 +1,8 @@
-  const hamburgerButton = document.querySelector('.hamburger-button')
-  const hamburgerIcon = document.querySelector('.hamburger-icon')
-  const hamburgerMenu = document.querySelector('.hamburger-menu')
+const hamburgerButton = document.querySelector('.hamburger-button')
+const hamburgerIcon = document.querySelector('.hamburger-icon')
+const hamburgerMenu = document.querySelector('.hamburger-menu')
+const cards = document.querySelectorAll(".cta-card")
+
 
 // Open and close the menu when the user clicks the hamburger button
 hamburgerButton.addEventListener('click', () => {
@@ -21,4 +23,19 @@ document.addEventListener('click', (event) => {
   }
 })
 
+//Create an Intersection Observer - observes when elements become visible
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show")
+        }, index * 400) // Delay (ms) per card
+      }
+    })
+  },
+  { threshold: 0.2 } // Activate when 20% of card is showing 
+)
+
+cards.forEach((card) => observer.observe(card));
 
