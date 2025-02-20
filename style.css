@@ -139,7 +139,8 @@ button:focus-visible {
   display: flex;
 }
 
-/* Hero section styles */
+/* HOME PAGE specific styles */
+/*Hero section styles */
 .hero {
   position: relative;
   grid-column: span 4;
@@ -237,7 +238,7 @@ button:focus-visible {
 
 }
 
-/* Button styles */
+/* CTA Button styles */
 .cta-button {
   /* Push the button to the bottom of the card */
   margin-top: auto;
@@ -245,7 +246,7 @@ button:focus-visible {
   /*I'm aware I'm using two margin-tops's but without both it doesn't look as good*/
 }
 
-/* Contact page specific styles */
+/* CONTACT PAGE specific styles */
 form {
   display: flex;
   flex-direction: column;
