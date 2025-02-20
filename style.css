@@ -287,7 +287,8 @@ textarea {
 input[name="name"]:active,
 input[name="email"]:active,
 textarea:active {
-  outline: none; /* Removes the standard blue outline */
+  outline: none;
+  /* Removes the standard blue outline */
   border: solid 2px var(--action-color);
 }
 
@@ -305,12 +306,14 @@ input[name="accept-terms"] {
 }
 
 input[type="checkbox"]:checked {
-  accent-color: #0d453a; /* Changes the color of the checkbox */
+  accent-color: #0d453a;
+  /* Changes the color of the checkbox */
 }
 
 textarea {
   height: 150px;
-  resize: vertical; /* Allow vertical resizing only */
+  resize: vertical;
+  /* Allow vertical resizing only */
   font-family: Jost, sans-serif;
   word-wrap: break-word;
   overflow-wrap: break-word;
