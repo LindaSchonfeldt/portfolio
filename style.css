@@ -182,10 +182,21 @@ footer {
 /* HOME PAGE  */
 
 /*Hero section styles */
-.hero {
+/* Main covers the hero + cta:s section of the page */
+main {
   position: relative;
   grid-column: span 4;
   margin: 0;
+}
+
+.hero {
+  position: relative;
+  /* Ensure the text is positioned relative to this container */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero-video {
@@ -300,6 +311,7 @@ footer {
 }
 
 /* CONTACT PAGE specific styles */
+
 form {
   display: flex;
   flex-direction: column;
@@ -411,7 +423,7 @@ textarea {
     grid-column: span 8;
   }
 
-  .hero {
+  main {
     grid-column: span 8;
   }
 
@@ -479,7 +491,7 @@ textarea {
     display: none;
   }
 
-  .hero {
+  main {
     grid-column: span 12;
   }
 
