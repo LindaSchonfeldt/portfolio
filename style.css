@@ -61,33 +61,35 @@ button:focus-visible {
 }
 
 /* Header styles */
-.header {
+header {
   position: sticky;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   background-color: var(--primary-color);
   box-shadow: 10px 10px gray;
-  height: 12vh;
   /* This will span the header across all 4 columns */
   grid-column: span 4;
   /* Put this on top of everything */
   z-index: 1000;
 }
 
-.header .logo img {
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
   width: auto;
   height: auto;
 }
 
-.header .nav-links {
+.nav-links {
   /* Hide by default, show on larger screens */
   display: none;
 }
 
-.header .nav-links a {
+.nav-links a {
   color: var(--text-color);
   font-size: smaller;
   text-decoration: none;
@@ -95,7 +97,7 @@ button:focus-visible {
   transition: background 0.3s;
 }
 
-.header .nav-links a:hover {
+.nav-links a:hover {
   color: #000;
 }
 
@@ -137,7 +139,6 @@ button:focus-visible {
 .hamburger-menu.active {
   /* Show the menu when active */
   display: flex;
-  top: 12vh;
 }
 
 /* HOME PAGE  */
@@ -148,11 +149,6 @@ button:focus-visible {
   grid-column: span 4;
   margin: 0;
 }
-
-/* .hero img {
-  width: 100%;
-  height: auto;
-} */
 
 .hero-video {
   width: 100%;
@@ -400,7 +396,7 @@ textarea {
     grid-template-columns: repeat(8, 1fr);
   }
 
-  .header {
+  header {
     grid-column: span 8;
     padding: 0 3rem 0 3rem;
   }
@@ -470,15 +466,15 @@ textarea {
     grid-template-rows: auto 1fr auto;
   }
 
-  .header {
+  header {
     grid-column: span 12;
   }
 
-  .header .nav-links {
+  .nav-links {
     display: block;
   }
 
-  .header .nav-links a {
+  .nav-links a {
     padding: 1rem 1rem;
     font-size: medium;
   }
