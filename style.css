@@ -14,6 +14,8 @@
   box-sizing: border-box;
 }
 
+/* GENERAL STYLES */
+
 /* Body styles */
 body {
   display: grid;
@@ -63,8 +65,9 @@ button:focus-visible {
 /* Header styles */
 header {
   position: sticky;
+  align-items: center;
   background-color: var(--primary-color);
-  box-shadow: 10px 10px gray;
+  box-shadow: 10px 10px #000;
   /* This will span the header across all 4 columns */
   grid-column: span 4;
   /* Put this on top of everything */
@@ -141,6 +144,48 @@ nav {
   display: flex;
 }
 
+/* Footer styles */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 1rem 0;
+  text-align: center;
+  /*Have the footer extend to the bottom*/
+  flex-grow: 1;
+  grid-column: span 4;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-media a {
+  display: inline-block;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.1);
+}
+
 /* HOME PAGE  */
 
 /*Hero section styles */
@@ -152,8 +197,8 @@ nav {
 
 .hero-video {
   width: 100%;
-  height: auto; 
-  overflow: hidden; 
+  height: auto;
+  overflow: hidden;
   position: relative;
   filter: blur(5px);
 }
@@ -253,7 +298,7 @@ nav {
 
 }
 
-/* CTA Button styles */
+/* CTA button styles */
 .cta-button {
   /* Push the button to the bottom of the card */
   margin-top: auto;
@@ -294,8 +339,8 @@ textarea {
 input[name="name"]:active,
 input[name="email"]:active,
 textarea:active {
+  /* Removes the standard blue outline - NOT working */
   outline: none;
-  /* Removes the standard blue outline */
   border: solid 2px var(--action-color);
 }
 
@@ -345,48 +390,6 @@ textarea {
 
 .checkbox-container input[type="checkbox"] {
   margin-right: 0.5rem;
-}
-
-/* Footer styles */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 1rem 0;
-  text-align: center;
-  /*Have the footer extend to the bottom*/
-  flex-grow: 1;
-  grid-column: span 4;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-content p {
-  margin: 0.5rem 0;
-}
-
-.social-media {
-  display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.social-media a {
-  display: inline-block;
-}
-
-.social-media img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s;
-}
-
-.social-media img:hover {
-  transform: scale(1.1);
 }
 
 /* MEDIA QUERIES */
