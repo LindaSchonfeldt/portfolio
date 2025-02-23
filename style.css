@@ -145,7 +145,11 @@ nav {
 }
 
 /* Footer styles */
-.footer {
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--primary-color);
   color: var(--text-color);
   padding: 1rem 0;
@@ -153,17 +157,6 @@ nav {
   /*Have the footer extend to the bottom*/
   flex-grow: 1;
   grid-column: span 4;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-content p {
-  margin: 0.5rem 0;
 }
 
 .social-media {
@@ -409,7 +402,7 @@ textarea {
     display: block;
   }
 
-  .footer {
+  footer {
     grid-column: span 8;
   }
 
@@ -490,7 +483,7 @@ textarea {
     grid-column: span 12;
   }
 
-  .footer {
+  footer {
     grid-column: span 12;
   }
 
