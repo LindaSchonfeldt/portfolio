@@ -22,7 +22,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   /* 100vh made the body not go all the way down around the footer*/
-  height: 100%;
+  height: 100vh;
   font-family: Jost, sans-serif;
   text-decoration: none;
   background-color: #f7f7f7;
@@ -299,7 +299,6 @@ main {
   margin-top: 0.5rem;
   /* Ensure the paragraph takes up the full width of the card */
   width: 100%;
-
 }
 
 /* CTA button styles */
